@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Padanan Kata - Master Imbuhan{% endblock %}
+
+{% block content %}
+
+<link href="{{ url_for('static', filename='css/matchingGame.css') }}" rel="stylesheet">
+
+<section id="padananKataSection" class="padanan-kata-section py-5">
+    <div class="container">
+        <!-- Title -->
+        <h1 class="display-4 text-center text-primary font-weight-bold">Padanan Kata</h1>
+        <hr class="my-4">
+
+      <!-- Latihan Selector Buttons -->
+<div class="latihan-selector mb-4 d-flex justify-content-center">
+    <button onclick="switchLatihan('latihan1')" class="btn btn-primary mx-2">Latihan 1</button>
+    <button onclick="switchLatihan('latihan2')" class="btn btn-primary mx-2">Latihan 2</button>
+</div>
+
+
+        <!-- Instructions -->
+        <main class="container">
+            <div>
+                <ul id="prefixList" class="draggable-list" aria-label="Prefix List">
+                    <!-- Prefixes will be dynamically populated based on the selected Latihan -->
+                </ul>
+            </div>
+
+            <div>
+                <ul id="rootWordList" class="draggable-list" aria-label="Root Word List">
+                    <!-- Root words will be dynamically populated based on the selected Latihan -->
+                </ul>
+            </div>
+        </main>
+
+        <!-- Result Message -->
+        <div id="endMessage" style="display: none;">
+            <h3>Tahniah!</h3>
+            <table id="resultTable">
+                <tr>
+                    <th>Imbuhan Awalan</th>
+                    <th>Kata Dasar</th>
+                </tr>
+                <!-- The correct pairs will be displayed here -->
+            </table>
+        </div>
+
+        <!-- Include external JS file -->
+        <script src="{{ url_for('static', filename='js/Matching.js') }}"></script>
+
+        <!-- Back Link -->
+        <div class="mt-5 text-center">
+            <a href="{{ url_for('permainan') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

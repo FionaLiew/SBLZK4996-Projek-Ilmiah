@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Tips Belajar Imbuhan Awalan{% endblock %}
+
+{% block content %}
+<section class="tips-section py-5 bg-light">
+    <div class="container">
+        <h1 class="display-4 text-success font-weight-bold text-center">Jom Belajar Imbuhan Awalan</h1>
+        <p class="lead text-center text-muted">
+            Dalam bahagian ini, cara ‘first letter mnemonics’ akan digunakan untuk menolong pelajar belajar imbuhan awalan dengan cepat.
+        </p>
+        <hr class="my-4">
+        
+        <div class="row">
+            <!-- Imbuhan Awalan peN- -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">Imbuhan <br><span class="display-5">peN-</span></h5>
+                        <p class="card-text text-muted">Pelajari lebih lanjut tentang imbuhan awalan peN-.</p>
+                        <a href="{{ url_for('pen') }}" class="btn btn-outline-primary">Pelajari peN-</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Imbuhan Awalan meN- -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">Imbuhan <br><span class="display-5">meN-</span></h5>
+                        <p class="card-text text-muted">Pelajari lebih lanjut tentang imbuhan awalan meN-.</p>
+                        <a href="{{ url_for('men') }}" class="btn btn-outline-primary mt-auto">Pelajari meN-</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imbuhan Awalan beR- -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">Imbuhan <br><span class="display-5">beR-</span></h5>
+                        <p class="card-text text-muted">Pelajari lebih lanjut tentang imbuhan awalan beR-.</p>
+                        <a href="{{ url_for('ber') }}" class="btn btn-outline-primary mt-auto">Pelajari beR-</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imbuhan Awalan teR- -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">Imbuhan <br><span class="display-5">teR-</span></h5>
+                        <p class="card-text text-muted">Pelajari lebih lanjut tentang imbuhan awalan teR-.</p>
+                        <a href="{{ url_for('ter') }}" class="btn btn-outline-primary mt-auto">Pelajari teR-</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Link -->
+            <div class="mt-5 text-center">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

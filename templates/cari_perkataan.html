@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Cari Perkataan - Master Imbuhan{% endblock %}
+
+{% block content %}
+
+<br class="my-4">
+
+<h1 class="display-4 text-center text-primary font-weight-bold">Pencarian Kata</h1>
+        <hr class="my-4">
+
+
+
+<h3 id="themeIntro">Tema: <span id="wordTheme"></span></h3>
+
+
+<div id="wordboard"></div>
+<div id="wordlist"></div>
+
+<section id="solve">
+    <button id="solveButton" type="button">Jawapan</button>
+</section>
+
+<!-- Back Link -->
+<div class="mt-5 text-center">
+    <a href="{{ url_for('permainan') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+</div>
+
+{% endblock %}
+
+{% block page_specific_scripts %}
+<!-- Override this block to prevent main.js from loading -->
+{% endblock %}
+
+{% block scripts %}
+<!-- Include jQuery and other required scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Word Search specific CSS file -->
+<link rel="stylesheet" href="{{ url_for('static', filename='WordSearch/wordSearch.css') }}">
+
+<!-- Include Word Search specific JS files -->
+<script src="{{ url_for('static', filename='WordSearch/WSlogic.js') }}"></script>
+<script src="{{ url_for('static', filename='WordSearch/WSpath.js') }}"></script>
+<script src="{{ url_for('static', filename='WordSearch/WScontroller.js') }}"></script>
+<script src="{{ url_for('static', filename='WordSearch/WSview.js') }}"></script>
+<script src="{{ url_for('static', filename='WordSearch/WordSearchAILogic.js') }}"></script>
+
+<script>
+    $(document).ready(function () {
+        console.log('Document ready - initializing Word Search Controller.');
+        try {
+            // Initialize Word Search Controller with appropriate elements
+            new WordSearchController("#wordboard", "#wordlist", "#solveButton", "#newGameButton",
+                "#wordTheme", "#challenge", "#Timer");
+            console.log('Word Search initialized successfully.');
+        } catch (error) {
+            console.error('Error initializing Word Search:', error);
+        }
+    });
+</script>
+{% endblock %}

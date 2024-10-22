@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Imbuhan Awalan meN - Master Imbuhan{% endblock %}
+
+{% block content %}
+<section class="tips-section py-5 bg-light">
+    <div class="container">
+        <!-- Page Title -->
+        <h1 class="display-4 text-success font-weight-bold text-center">Selamat Datang ke</h1>
+        <h2 class="text-primary font-weight-bold text-center">MASTER IMBUHAN</h2>
+        <p class="text-center text-secondary">Jom Belajar!</p>
+        <hr class="my-4">
+
+
+                <!-- Imbuhan Awalan peN Introduction -->
+                <div class="mb-5">
+                    <h3 class="text-primary">Imbuhan Awalan meN-</h3>
+                    <p class="lead">
+                        Terdapat enam jenis imbuhan awalan <strong>meN-</strong> iaitu <strong>meN- iaitu me-, mem-, men-, meng-, menge-,</strong> dan <strong>meny-</strong>.
+                        <br>
+                        Biasanya imbuhan awalan <strong>meN-</strong> digunakan sebagai <u>kata kerja</u>.
+                    </p>
+                </div>
+
+        <!-- Table Section -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Imbuhan</th>
+                        <th>Kegunaan</th>
+                        <th>Contoh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>me-</td>
+                        <td>Digunakan pada kata dasar yang bermula dengan huruf: <br> l, m, n, ng, ny, r, w</td>
+                        <td>lihat → melihat <br> masak → memasak <br> nanti → menanti</td>
+                    </tr>
+                    <tr>
+                        <td>mem-</td>
+                        <td>Digunakan pada kata dasar yang bermula dengan huruf: <br> b, f (perlu digugurkan), p (perlu digugurkan)</td>
+                        <td>bantu → membantu <br> faham → memaham <br> pandu → memandu</td>
+                    </tr>
+                    <tr>
+                        <td>men-</td>
+                        <td>Digunakan pada kata dasar yang bermula dengan huruf: <br> c, d, j, t (perlu digugurkan)</td>
+                        <td>cuci → mencuci <br> dapat → mendapat <br> tanam → menanam</td>
+                    </tr>
+                    <tr>
+                        <td>meng-</td>
+                        <td>Digunakan pada kata dasar yang bermula dengan huruf: <br> a, e, i, o, u, g, h, k (perlu digugurkan)</td>
+                        <td>ambil → mengambil <br> ikat → mengikat <br> uji → menguji</td>
+                    </tr>
+                    <tr>
+                        <td>meny-</td>
+                        <td>Digunakan pada kata dasar yang bermula dengan huruf s (perlu digugurkan)</td>
+                        <td>sapu → menyapu</td>
+                    </tr>
+                    <tr>
+                        <td>menge-</td>
+                        <td>Digunakan pada kata dasar yang hanya terdiri daripada satu suku kata</td>
+                        <td>cat → mengecat</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Back Link -->
+        <div class="mt-5 text-center">
+            <a href="{{ url_for('tips') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

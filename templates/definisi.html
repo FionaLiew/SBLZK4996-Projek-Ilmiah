@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}MASTER IMBUHAN - Definisi{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section text-center py-5 bg-light">
+    <div class="container">
+        <h1 class="display-4 text-success font-weight-bold">Definisi Imbuhan</h1>
+        <p class="lead text-center text-muted">
+Definisi adalah untuk pelajari maksud imbuhan tersebut.        </p>
+        <hr class="my-4">
+    </div>
+</section>
+
+<!-- Definition Content Section -->
+<section class="definition-section py-5">
+    <div class="container">
+        <!-- Apakah itu Imbuhan -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <h2 class="text-primary mb-4">Apakah itu Imbuhan?</h2>
+                <p class="lead text-muted">
+                    Perkataan-perkataan dalam sesuatu bahasa boleh terdiri daripada bentuk dasar, iaitu bentuk kata terkecil yang tidak menerima sebarang imbuhan, atau bentuk terbitan, bentuk yang dihasilkan daripada proses memperluas bentuk dasar tadi melalui berbagai- bagai cara pembentukan kata. 
+                    Imbuhan dimaksudkan unit-unit bahasa tertentu yang ditambahkan pada bentuk-bentuk lain yang menyebabkan perubahan makna nahunya. Tercakup dalam imbuhan ialah bentuk-bentuk berikut: awalan, akhiran, sisipan, apitan, morfem kosong, dan bentuk fleksi.
+                </p>
+            </div>
+        </div>
+
+        <!-- Apakah itu Imbuhan Awalan -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <h2 class="text-primary mb-4">Apakah itu Imbuhan Awalan?</h2>
+                <p class="lead text-muted">
+                    Awalan ialah imbuhan yang ditambahkan pada bahagian hadapan kata dasar, misalnya:
+                </p>
+                <ul class="list-unstyled text-muted fs-5">
+                    <li>(i) <strong>ber-</strong> dalam <em>berjalan</em> dan <strong>ter-</strong> dalam <em>terambil</em> (bahasa Melayu);</li>
+                    <li>(ii) <strong>im-</strong> dalam <em>impolite</em> 'tidak sopan' dan <strong>dis-</strong> dalam <em>displease</em> 'tidak senang' (bahasa Inggeris);</li>
+                    <li>(iii) <strong>an-</strong> dalam <em>antac</em> 'gigi sikat' dan <strong>iŋ-</strong> dalam <em>iŋkama</em> 'ladang jagung awak' (bahasa Sierra Popoluka);</li>
+                    <li>(iv) <strong>tag-</strong> dalam <em>tagulan</em> 'musim hujan' (bahasa Tagalog).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Jenis Imbuhan Awalan -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <h2 class="text-primary mb-4">Jenis Imbuhan Awalan</h2>
+                <p class="lead text-muted">
+                    Terdapat 4 jenis imbuhan awalan iaitu:
+                </p>
+                <ul class="list-unstyled text-muted fs-5">
+                    <li>(i) imbuhan awalan <strong>peN-</strong>;</li>
+                    <li>(ii) imbuhan awalan <strong>meN-</strong>;</li>
+                    <li>(iii) imbuhan awalan <strong>beR-</strong>;</li>
+                    <li>(iv) imbuhan awalan <strong>teR-</strong>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Back Link -->
+        <div class="mt-5 text-center">
+            <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Ujian Imbuhan - Master Imbuhan{% endblock %}
+
+{% block content %}
+<section class="ujian-section py-5">
+    <div class="container">
+        <!-- Title -->
+        <h1 class="display-4 text-center text-primary font-weight-bold">MASTER IMBUHAN</h1>
+        <h2 class="text-center text-success">Uji di Sini</h2>
+        <hr class="my-4">
+
+        <!-- Form Section -->
+        <form id="imbuhanForm" onsubmit="return checkImbuhan()">
+            <!-- Dropdown to select imbuhan -->
+            <div class="form-group mb-4">
+                <label for="imbuhanAwalan" class="form-label">Pilih Imbuhan Awalan:</label>
+                <select class="form-control form-select-lg" id="prefix" name="prefix" required>
+                    <option disabled selected>Sila pilih imbuhan awalan</option>
+                    <option value="peN">Imbuhan Awalan peN-</option>
+                    <option value="meN">Imbuhan Awalan meN-</option>
+                    <option value="be">Imbuhan Awalan beR-</option>
+                    <option value="te">Imbuhan Awalan teR-</option>
+                </select>
+            </div>
+
+            <!-- Textbox for Kata Dasar -->
+            <div class="form-group mb-4">
+                <label for="kataDasar" class="form-label">Sila masukkan kata dasar:</label>
+                <input type="text" class="form-control form-control-lg" id="kataDasar" name="kata_dasar" placeholder="Masukkan kata dasar" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Menyemak</button>
+            </div>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="result mt-5 d-none">
+            <div class="card shadow-sm border-primary">
+                <div class="card-body text-center">
+                    <h4 class="card-title text-info">Hasil Imbuhan</h4>
+                    <p class="card-text">
+                        <strong>Imbuhan:</strong> <span id="imbuhanText"></span><br>
+                        <strong>Jawapan:</strong> <span id="jawapanText"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back Link -->
+        <div class="mt-5 text-center">
+            <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+        </div>
+      
+    </div>
+</section>
+{% endblock %}

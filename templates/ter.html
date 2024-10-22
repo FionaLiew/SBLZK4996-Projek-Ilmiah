@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Imbuhan Awalan teR- - Master Imbuhan{% endblock %}
+
+{% block content %}
+<section class="tips-section py-5 bg-light">
+    <div class="container">
+        <h1 class="display-4 text-success font-weight-bold text-center">Imbuhan Awalan teR-</h1>
+        <p class="lead text-center text-muted">Jom Belajar!</p>
+        <hr class="my-4">
+
+         <!-- Imbuhan Awalan peN Introduction -->
+ <div class="mb-5">
+    <h3 class="text-primary">Imbuhan Awalan teR-</h3>
+    <p class="lead">
+        Terdapat dua jenis imbuhan awalan <strong>teR-</strong> iaitu <strong> te-</strong> dan <strong>ter-</strong>.
+        <br>
+        Biasanya imbuhan awalan <strong>teR-</strong> digunakan sebagai <u>kata adjektif</u>.
+    </p>
+</div>
+
+   <!-- Table Section -->
+   <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+
+                    <tr>
+                        <th>Imbuhan</th>
+                        <th>Kegunaan</th>
+                        <th>Contoh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>te-</strong></td>
+                        <td>Digunakan pada kata dasar yang bermula dengan huruf r</td>
+                        <td>rancang → terancang</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ter-</strong></td>
+                        <td>Digunakan pada kata dasar yang bermula dengan selain huruf r</td>
+                        <td>besar → terbesar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+                <!-- Back Link -->
+                <div class="mt-5 text-center">
+                    <a href="{{ url_for('tips') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+                </div>
+        
+    </div>
+</section>
+{% endblock %}

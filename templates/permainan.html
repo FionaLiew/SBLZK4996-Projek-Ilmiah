@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Permainan - Master Imbuhan{% endblock %}
+
+{% block content %}
+<section class="permainan-section py-5">
+    <div class="container">
+        <!-- Title -->
+        <h1 class="display-4 text-center text-primary font-weight-bold">MASTER IMBUHAN</h1>
+        <h2 class="text-center text-success">Pilih Permainan untuk Mula</h2>
+        <hr class="my-4">
+
+        <!-- Game Options Section -->
+        <div class="row justify-content-center">
+            <!-- Cari Perkataan -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-lg h-100">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title text-primary">Cari Perkataan</h5>
+                        <p class="card-text text-muted">Cari perkataan yang berimbuahan awalan dalam permainan ini.</p>
+                        <a href="{{ url_for('cari_perkataan') }}" class="btn btn-outline-primary mt-auto">Mula Cari Perkataan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Padanan Kata -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-lg h-100">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title text-primary">Padanan Kata</h5>
+                        <p class="card-text text-muted">Padankan imbuhan dengan kata dasar yang betul.</p>
+                        <a href="{{ url_for('padanan_kata') }}" class="btn btn-outline-primary mt-auto">Mula Padanan Kata</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Link -->
+            <div class="mt-5 text-center">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-lg">Kembali</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
